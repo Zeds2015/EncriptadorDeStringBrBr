@@ -43,7 +43,7 @@ public class Arquivo {
 
     public String AcessarArquivo(String chave) {
         if (chave.equals(this.chave)) {
-            texto = texto.replace("quit", "");
+            texto = texto.replaceAll("quit", "");
             return texto;
         }
         throw new IllegalAccessError("Chave inválida");
